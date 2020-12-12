@@ -11,3 +11,9 @@ function con() {
     document.getElementById("concatenate").innerHTML=string_1; //assigns the string to the element
 }
 
+function to_fahrenheit() {
+    var degrees = document.getElementById("celsius").innerHTML;
+    var f = (degrees*(9/5))+32;
+    var text = "The current temperature is " + f + " degrees Fahrenheit";
+    document.getElementById("fahrenheit").innerHTML = text;
+}
