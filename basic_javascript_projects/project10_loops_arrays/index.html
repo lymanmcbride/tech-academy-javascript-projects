@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops and arrays</title>
+    <script src="JS/main.js" defer></script>
+</head>
+<body>
+    <h1>Loops</h1>
+    <h2>Click the button to execute the loop</h2>
+    <p id="loop"></p>
+    <button onclick="call_loop()">Click</button>
+    <h2 id="len">Return the length of this title!</h2>
+    <button onclick="length_function()">Click</button>
+    <p id="total"></p>
+    <h2>For Loop above and For of loop below</h2>
+    <p id="list_of_instruments"></p>
+    <button onclick="for_loop(); for_of_loop();">Click</button>
+    <p id="of_list"></p>
+    <h1>Arrays</h1>
+    <h2>First Array function</h2>
+    <p id="array"></p>
+    <button onclick="array_function()">Click</button>
+    <h2>Constants</h2>
+    <p id="constant"></p>
+    <button onclick="constant_function()">Clicks</button><br>
+    <button onclick="change_function()">Click to change element</button>
+    <h2>Let Keyword</h2>
+    <p id="let_it_be"></p>
+    <button onclick="let_practice()">Click</button>
+    <h2>Multiplication (using a return statement in the function)</h2>
+    <input id="value_1" value="" type="number"><br>
+    <input id="value_2" value="" type="number"><br>
+    <button onclick="multiply()">Multiply</button>
+    <p id="product"></p>
+    <h2>Using return statement to write an object description</h2>
+    <p id="phone_description"></p>
+    <h2>Break and Continue</h2>
+    <p id="words"></p>
+    <p>To use the break keyword, type one of the above words into the input to find it in the array. It will return all of the words up to that point, as well as the index of your word in the array</p>
+    <input type="text" id="break_word" value="">
+    <button onclick="break_word_function()">Click</button>
+    <p id="break_word_result"></p>
+    <p>To use the continue keyword, type one of the above words into the input to find it in the array. It will return only the word and its index.</p>
+    <input type="text" id="continue_word" value="">
+    <button onclick="continue_word_function()">Click</button>
+    <p id="continue_word_result"></p>
+</body>
+</html>
