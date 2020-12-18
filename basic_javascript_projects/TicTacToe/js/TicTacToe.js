@@ -7,10 +7,12 @@ function placeXorO (squareNumber) {
         let select = document.getElementById(squareNumber); //retrieves the clicked html element
         // Checks whose turn it is
         if (activePlayer === 'X') {
-            select.style.backgroundImage='url("images/x.png")'; //puts the image in that spot
+            select.style.backgroundImage='url("images/x1.jpg")'; //puts the image in that spot
+            select.style.backgroundRepeat="no-repeat"; // makes sure it doesn't repeat
         }
         else {
-            select.style.backgroundImage='url("images/o.png")';
+            select.style.backgroundImage='url("images/o1.jpg")';
+            select.style.backgroundRepeat="no-repeat";
         }
         //squareNumber and activePlayer are concatenated and added to array
         selectedSquares.push(squareNumber+activePlayer);
@@ -24,7 +26,7 @@ function placeXorO (squareNumber) {
         }
 
         // placement sounds
-        audio('./media/place.mp3');
+        audio('./media/place1.mp3');
         // checks for computer's turn
         if (activePlayer==='O') {
             disableClick();
@@ -75,7 +77,7 @@ function checkWinConditions() {
 
     //Check for Tie
     else if (selectedSquares.length >= 9) {
-        audio('./media/tie.mp3');
+        audio('./media/tie1.mp3');
         setTimeout(function () { resetGame(); }, 1000);
     }
 
@@ -96,7 +98,13 @@ function disableClick() {
 
 function audio(audioURL) {  //You set the path of audioURL earlier
     let audio=new Audio(audioURL);
-    audio.play()  //this method plays the sound. Not sure what the audio object is. did I define that?
+    audio.play()  //this method plays the sound. Not sure what the audio object is. did I define that?   
+}
+
+function audio_win(audioURL) {  //You set the path of audioURL earlier
+    let audio=new Audio(audioURL);
+    audio.play();
+    setTimeout(function() { audio.pause(); }, 5000); //this method plays the sound. Not sure what the audio object is. did I define that?   
 }
 
 function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
@@ -143,7 +151,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     }
     
     disableClick();
-    audio('./media/winGame.mp3');
+    audio_win('./media/winGame1.mp3');
     animateLineDrawing();
     setTimeout(function () { clear(); resetGame(); }, 1000);
 }
