@@ -54,5 +54,13 @@ body {
 
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+    color: rgb(26, 26, 26);
+}
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(26, 26, 26);
+}
+div {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(73, 70, 70);
 }
