@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Practice</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function() { //$ means jQuery() which is the jquery version of saying document.something
+        $("html").append(
+            "<body>\
+                <div id='container'>\
+                    <div id='inner'>\
+                        <h1>Basic jQuery</h1>\
+                        <p id='1'>Paragraph 1</p>\
+                        <p id='2'>Paragraph 2</p>\
+                        <p id='3'>Paragraph 3</p>\
+                        <button id='4'>Hide</button>\
+                        <button id='5'>Show</button>\
+                        <p>Name:</p><input type='text' name='fullname'><br>\
+                    </div>\
+                </div>\
+            </body>"
+        );
+        $("#2").css({"color": "red"});
+        $("#4").click(function() {
+            $('h1').hide("slow");
+        });
+        $("input").focus(function() {
+            $(this).css("background-color", "#000");
+            $(this).css("color", "#fff");
+        });
+        $("input").blur(function() {
+            $(this).css("background-color", "#fff");
+        })
+        $("#5").click(function() {
+            $('h1').show("fast");
+        })
+    })  
+</script>
+</html>
