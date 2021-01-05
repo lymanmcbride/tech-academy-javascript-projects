@@ -1,6 +1,6 @@
 # Tech Academy JavaScript Course
 
-This contains the sample websites and apps made as part of the JavaScript course in the Tech Academy bootcamp.
+This contains the sample websites and apps made as part of the JavaScript course in The Tech Academy bootcamp.
 
 ## Projects
 - [Tic Tac Toe](https://github.com/lymanmcbride/tech-academy-javascript-projects/tree/main/TicTacToe)
